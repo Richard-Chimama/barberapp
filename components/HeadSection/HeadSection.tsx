@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import * as S from "./style";
 import Form from "../Form";
+import Nav from "../Nav";
 
 const statement = {
   mission:
@@ -11,22 +12,28 @@ const statement = {
 const HeadSection = () => {
   return (
     <S.HeadContainer>
-      <S.HeadSection>
-        <S.FormSection>
-          <Form />
-        </S.FormSection>
+      <S.NavWrapper>
+        <Nav />
+      </S.NavWrapper>
 
-        <S.TextSection>
-          <div>
-            <S.MottoLabel>{statement.motto.split(",")[0]}</S.MottoLabel>
-            <S.MottoLabel>{statement.motto.split(",")[1]}</S.MottoLabel>
-          </div>
-          
-          <S.MissionLabelWrapper>
-            <S.MissionLabel>{statement.mission}</S.MissionLabel>
-          </S.MissionLabelWrapper>
-        </S.TextSection>
-      </S.HeadSection>
+      <S.Wrapper>
+        <S.HeadSection>
+          <S.FormSection>
+            <Form />
+          </S.FormSection>
+
+          <S.TextSection>
+            <div>
+              <S.MottoLabel>{statement.motto.split(",")[0]}</S.MottoLabel>
+              <S.MottoLabel>{statement.motto.split(",")[1]}</S.MottoLabel>
+            </div>
+
+            <S.MissionLabelWrapper>
+              <S.MissionLabel>{statement.mission}</S.MissionLabel>
+            </S.MissionLabelWrapper>
+          </S.TextSection>
+        </S.HeadSection>
+      </S.Wrapper>
     </S.HeadContainer>
   );
 };
