@@ -11,26 +11,28 @@ export const Container = styled(Box)(prop =>({
     justifyContent: 'center',
 }))
 
-export const SectionWrapper = styled(Box)(prop =>({
+export const SectionWrapper = styled(Box).attrs(prop =>({
     display: 'flex',
     justifyContent: 'space-around',
     alignItems: 'center',
     flexWrap: 'wrap',
-    width: '90vw',
+    width: {xs:"100vh", md:'90vw'},
+    marginTop: {xs: "50px"}
     
-}))
+}))``
 
 export const Section1 = styled(Box).attrs(prop =>({
     display: 'flex',
     flexDirection: 'column',
     gap: '65px',
     width: '30%',
-    minWidth: {sm:'300px', md:'400px'},
+    minWidth: {xs: '400px',sm:'450px', md:'400px'},
+    marginBottom: {xs: "100px"},
 
 }))``
 
 export const Section1Header = styled(Typography).attrs(prop =>({
-    fontSize: {sm:'32px', md:'46px'},
+    fontSize: {xs:'38px', md:'46px'},
     fontWeight: 800,
     color: Theme.colors.secondary,
 }))``

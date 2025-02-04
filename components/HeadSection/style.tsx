@@ -41,20 +41,20 @@ export const FormSection = styled(Box).attrs((prop) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    height: { xs: "600px", sm: "500px" },
+    height: { xs: "530px", sm: "500px" },
     width: { xs: "100%", md: "500px" },
   },
 }))``;
 
 export const TextSection = styled(Box).attrs((prop) => ({
   sx: {
-    height: { xs: "200px", sm: "200px" },
+    height: { xs: "50px", sm: "200px" },
     width: "100%",
     display: "flex",
     flexDirection: { xs: "column", sm: "column", md: "row-reverse" },
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginTop: { xs: "-100px" },
+    justifyContent: {xs:"flex-start" ,sm:"space-between"},
+    alignItems: {xs:"flex-start",  sm:"center"},
+    marginTop: { xs: "-50px" },
   },
 }))``;
 
@@ -76,10 +76,11 @@ export const MissionLabel = styled(Typography).attrs((prop) => ({
 }))``;
 
 export const MottoLabel = styled(Typography).attrs((prop) => ({
-  fontSize: { xs: "30px", sm: "36px", md: "56px" },
+  fontSize: { xs: "35px", sm: "36px", md: "56px" },
   fontWeight: "900",
-  textAlign: "right",
+  textAlign: {xs:"left", md:"right"},
   textTransform: "uppercase",
-  textshadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
+  textshadow: "2px 2px 4px rgba(0, 0, 0, 1)",
   lineHeight: { xs: "35px", md: "50px" },
+  marginBottom: {xs:"10px"},
 }))``;
