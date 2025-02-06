@@ -28,7 +28,7 @@ const ResponsiveCarousel: FC<Props> = forwardRef<CarouselRef, Props>(({ images }
 
   return (
     <S.Container>
-      <S.ImageWrapper sx={{ transform: `translateX(-${index * 100}%)` }}>
+      <S.ImageWrapper sx={{ transform: `translateX(-${index * 100}px)` }}>
         {images.map((img, idx) => (
           <S.Img key={idx} src={img} alt={"hair cut image"} />
         ))}

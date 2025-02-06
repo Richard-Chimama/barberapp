@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Roboto, Geist_Mono } from "next/font/google";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import { ThemeProvider, CssBaseline, createTheme } from "@mui/material";
 import ClientThemeProvider from "./ClientThemeProvider/ClientThemeProvider";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 
 const roboto = Roboto({
   weight: ["400", "500", "700", "900"],

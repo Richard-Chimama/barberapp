@@ -6,11 +6,13 @@ import { StaticImageData } from 'next/image';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useRef } from 'react';
-import { Fab } from '@mui/material';
+import { Fab, Typography } from '@mui/material';
+import TextCarousel from './TextCarousel';
 
 export interface CarouselRef {
     moveLeft: () => void;
     moveRight: () => void;
+    totalImages: number
   }
 
 const images: StaticImageData[] = [image1, image2, image1, image2];
@@ -31,10 +33,10 @@ const PriceSection = ()=>{
             <S.SectionWrapper>
                 <S.Section1>
                     <S.TextSection1>
-                        <div>
+                        <S.TextLabel>
                             <S.HeadTextSection1>Discover</S.HeadTextSection1>
                             <S.HeadTextSection1>Our Works</S.HeadTextSection1>
-                        </div>
+                        </S.TextLabel>
                         <S.ContentTextSection1>
                             Our team of expereinced barbers is dedicated to their craft.
                             We stay  updated with the latest techniques and styled to 
@@ -45,6 +47,7 @@ const PriceSection = ()=>{
                             <Fab color="primary" onClick={handleClikLeft}>
                              <ArrowBackIcon /> 
                             </Fab>
+                            <Typography>{carouselRef.current?.totalImages}</Typography>
                             <Fab color="primary" onClick={handleClikRight}>
                                 <ArrowForwardIcon />
                             </Fab>
@@ -57,7 +60,9 @@ const PriceSection = ()=>{
                     </S.ImageSection>
                 </S.Section1>
 
-                <S.Section2></S.Section2>
+                <S.Section2>
+                    <TextCarousel />
+                </S.Section2>
             </S.SectionWrapper>
         </S.Container>
     )

@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import * as S from "./style";
 import Form from "../Form";
 import Nav from "../Nav";
