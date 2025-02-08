@@ -44,9 +44,9 @@ const PriceSection = ()=>{
                         </S.ContentTextSection1>
 
                         <S.IconContainer>
-                            <Fab color="primary" onClick={handleClikLeft}>
+                            <S.IcontButton onClick={handleClikLeft} >
                              <ArrowBackIcon /> 
-                            </Fab>
+                            </S.IcontButton>
                             <Typography>{carouselRef.current?.totalImages}</Typography>
                             <Fab color="primary" onClick={handleClikRight}>
                                 <ArrowForwardIcon />

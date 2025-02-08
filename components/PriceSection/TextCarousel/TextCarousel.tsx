@@ -22,20 +22,23 @@ const reviewData = [
 ];
 
 const TextCarousel = () => {
-    const [selectedIndex, setSelectedIndex] = useState<number>(0); 
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
   const handlePrevClick = () => {
-    setSelectedIndex((prev:number) => (prev === 0 ? reviewData.length - 1 : prev - 1));
+    setSelectedIndex((prev: number) =>
+      prev === 0 ? reviewData.length - 1 : prev - 1
+    );
   };
 
   const handleNextClick = () => {
-    setSelectedIndex((prev:number) => (prev === reviewData.length - 1 ? 0 : prev + 1));
+    setSelectedIndex((prev: number) =>
+      prev === reviewData.length - 1 ? 0 : prev + 1
+    );
   };
 
-  const handleIndicatorClick = (index:number) => {
+  const handleIndicatorClick = (index: number) => {
     setSelectedIndex(index);
   };
-
 
   return (
     <S.Wrapper>
@@ -43,37 +46,59 @@ const TextCarousel = () => {
         showThumbs={false}
         emulateTouch={true}
         infiniteLoop={true}
+        showArrows={false}
+        showStatus={false}
+        showIndicators={false}
         selectedItem={selectedIndex}
         onChange={(index) => setSelectedIndex(index)}
       >
         {reviewData.map((txt, idx) => (
           <Box key={idx}>
-            <S.Text>Name: {txt.name}</S.Text>
-            <Typography>{txt.message}</Typography>
+            <S.Text>{txt.message}</S.Text>
           </Box>
         ))}
       </S.Container>
+      <S.IndicatorWrapper>
+        {reviewData.map((_, idx) => (
+          <button
+            type="button"
+            key={idx}
+            onClick={() => handleIndicatorClick(idx)}
+            style={{
+              background: "none",
+              border: "none",
+              color: selectedIndex === idx ? "white" : "black",
+              fontSize: "24px",
+              cursor: "pointer",
+              padding: 0,
+            }}
+          >
+            _
+          </button>
+        ))}
+      </S.IndicatorWrapper>
+
       <S.BottomSection>
-        <Typography variant="body1" style={{ fontWeight: "bold" }}>
-          User Name
-        </Typography>
+        <S.NameLabel variant="body1" style={{ fontWeight: "bold" }}>
+          {reviewData[selectedIndex].name}
+        </S.NameLabel>
         <S.NavWrapper>
-            <div>
+          <S.IconWrapper>
             <S.ButtonThumb
-          type="button"
-          isRight={false}
-          onClick={handlePrevClick}
-        >
-          <ArrowBack onClick={handlePrevClick} />
-        </S.ButtonThumb>
+              type="button"
+              isRight={false}
+              onClick={handlePrevClick}
+            >
+              <ArrowBack onClick={handlePrevClick} />
+            </S.ButtonThumb>
             <S.ButtonThumb
-          type="button"
-          isRight={true}
-          onClick={handleNextClick}
-        >
-          <ArrowForward onClick={handleNextClick} />
-        </S.ButtonThumb>
-            </div>
+              type="button"
+              isRight={true}
+              onClick={handleNextClick}
+            >
+              <ArrowForward onClick={handleNextClick} />
+            </S.ButtonThumb>
+          </S.IconWrapper>
         </S.NavWrapper>
       </S.BottomSection>
     </S.Wrapper>

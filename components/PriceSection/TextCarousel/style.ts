@@ -4,11 +4,11 @@ import styled from "styled-components";
 import Theme from "../../../theme";
 
 export const Wrapper = styled(Box)((props) => ({
-  backgroudColor: "white",
   position: 'relative',
   height: '400px',
   width: "400px",
   backgroundColor: Theme.colors.tertiary,
+  borderRadius: "25px",
 
 }));
 
@@ -18,8 +18,6 @@ export const Container = styled(Carousel)((prop) => ({
   flexDirection: "column",
   justifyContent: "flex-start",
   padding: "10px 20px",
-  borderRadius: "15px",
-  border: '1px solid limegreen',
 }));
 
 
@@ -32,12 +30,20 @@ export const BottomSection = styled(Box)((prop) => ({
 
 export const ButtonThumb = styled(Button)<{isRight: boolean}>(prop =>({
     position: 'absolute',
-    bottom: '10px',
+    bottom: '20px',
     right: prop.isRight ? '20px': '60px',
     zIndex: 2,
     backgroundColor: 'transparent',
-    border: 'none',
-    cursor: 'pointer'
+    borderRadius: '100px',
+    cursor: 'pointer',
+    color: 'black',
+}))
+
+export const IndicatorWrapper = styled(Box)(prop =>({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '8px',
 }))
 
 export const ButtonIndicator = styled(Button)<{isSelected: boolean}>`
@@ -52,9 +58,19 @@ export const ButtonIndicator = styled(Button)<{isSelected: boolean}>`
 
 export const Text = styled(Typography)((prop) => ({
   color: Theme.colors.primary,
-  fontWeight: "bolder",
-  fontSize: "22px",
-  textAlign: "left",
+  fontSize: "18px",
+  textAlign: "center",
+  paddingTop: '25px',
 }));
 
 export const NavWrapper = styled(Box)((prop) => ({}));
+
+export const NameLabel = styled(Typography)(prop => ({
+  fontWeight: 'bolder',
+  position: 'absolute',
+  left: '20px',
+  bottom: '20px',
+}))
+
+export const IconWrapper = styled(Box)(prop =>({
+}))

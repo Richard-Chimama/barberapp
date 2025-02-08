@@ -27,7 +27,6 @@ export const Section1 = styled(Box).attrs(prop =>({
     height: '440px',
     paddingInline: ' 20px',
     width: '90vw',
-    outline: '1px solid red',
 }))``;
 
 export const TextSection1 = styled(Box).attrs(prop =>({
@@ -54,8 +53,22 @@ export const ContentTextSection1 = styled(Typography)(props =>({
 }))
 
 export const IconContainer = styled(Box)(props =>({
-
+    display: 'flex',
+    gap: '5px',
 }))
+
+export const IcontButton = styled.div`
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+    outline: none;
+    transparent: true;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+`
 
 export const ImageSection = styled(Box).attrs(props =>({
     height: '400px',
