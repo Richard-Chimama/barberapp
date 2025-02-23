@@ -2,20 +2,23 @@ import { Box, Typography, fabClasses } from "@mui/material";
 import styled from "styled-components";
 import Theme from "../../theme";
 
-export const Container = styled(Box)(props =>({
+export const Container = styled(Box).attrs(props =>({
     width: '100vw',
     backgroundColor: Theme.colors.neutral[3],
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding:'100px 10px',
-}))
+    paddingTop:'100px',
+    paddingLeft: {md:'20%'},
+    paddingRight: {md:'20%'},
+    paddingBottom: '100px',
+
+}))``
 
 export const SectionWrapper = styled(Box).attrs(props =>({
-   paddingInline: {md:'4%'},
    display: 'flex',
     flexDirection: 'column',
-    gap: '50px',
+    gap: '100px',
 }))``
 
 export const Section1 = styled(Box).attrs(prop =>({
@@ -26,7 +29,6 @@ export const Section1 = styled(Box).attrs(prop =>({
     gap: '100px',
     height: '440px',
     paddingInline: ' 20px',
-    width: '90vw',
 }))``;
 
 export const TextSection1 = styled(Box).attrs(prop =>({
@@ -75,5 +77,31 @@ export const ImageSection = styled(Box).attrs(props =>({
 }))``
 
 export const Section2 = styled(Box).attrs(prop =>({
-
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
 }))``;
+
+export const PriceList = styled(Box)(prop =>({
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    width: '500px',
+    height: '350px',
+}))
+
+export const PriceListLabel = styled(Typography)(prop => ({
+    fontSize: '56px',
+    textTransform: 'uppercase',
+    fontWeight: 800,
+    lineHeight: '50px',
+}))
+
+export const PriceItemContainer = styled(Box).attrs(prop =>({
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderBottom: '1px solid black',
+}))`
+ &
+`

@@ -86,14 +86,14 @@ const TextCarousel = () => {
           <S.IconWrapper>
             <S.ButtonThumb
               type="button"
-              isRight={false}
+              right="60px"
               onClick={handlePrevClick}
             >
               <ArrowBack onClick={handlePrevClick} />
             </S.ButtonThumb>
             <S.ButtonThumb
               type="button"
-              isRight={true}
+              right="20px"
               onClick={handleNextClick}
             >
               <ArrowForward onClick={handleNextClick} />

@@ -28,10 +28,10 @@ export const BottomSection = styled(Box)((prop) => ({
   marginTop: "20px",
 }));
 
-export const ButtonThumb = styled(Button)<{isRight: boolean}>(prop =>({
+export const ButtonThumb = styled(Button)<{right: string}>(prop =>({
     position: 'absolute',
     bottom: '20px',
-    right: prop.isRight ? '20px': '60px',
+    right: prop.right,
     zIndex: 2,
     backgroundColor: 'transparent',
     borderRadius: '100px',

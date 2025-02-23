@@ -16,8 +16,8 @@ const ResponsiveCarousel: FC<Props> = forwardRef<CarouselRef, Props>(
     const [index, setIndex] = useState<number>(0);
     const totalImages = images.length;
 
-    const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth)
-    const isMobile = screenWidth > 700;
+    const [screenWidth, setScreenWidth] = useState<number| null >(null)
+    const isMobile = screenWidth ? screenWidth > 700: false;
     const showMoreItems = isMobile ? 50: 0;
 
 

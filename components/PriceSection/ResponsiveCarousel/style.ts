@@ -4,9 +4,6 @@ import styled from "styled-components";
 import { Carousel } from "react-responsive-carousel";
 
 export const Container = styled(Carousel)`
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
     overflow: hidden;
 
@@ -31,7 +28,9 @@ export const ImageWrapper = styled(Box)((props) => ({
 export const Img = styled(Image)((props) => ({
   width: "100%",
   maxWidth: "400px",
-  height: "auto",
+  height: "400px",
   borderRadius: "8px",
   boxShadow: "0px 4px 6px rgba(0,0,0,0.1)",
+  paddingLeft:'5px',
+  paddingRight: '5px'
 }));
