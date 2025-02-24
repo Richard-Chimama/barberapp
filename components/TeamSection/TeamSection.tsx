@@ -7,6 +7,7 @@ import image5 from '../../public/images/image5.jpg'
 import image6 from '../../public/images/image6.jpg'
 import image7 from '../../public/images/image7.jpg'
 import Theme from '../../theme';
+import Footer from '../Footer';
 
 const data = [
   {
@@ -48,6 +49,7 @@ const TeamSection = () => {
   return (
     <S.Container>
         <S.SectionWrapper>
+          <S.Section>
             <S.TitleLabel>Meet our experts</S.TitleLabel>
             <S.MottoTLabel>Each nember of our team is committed to providing an exceptional grooming</S.MottoTLabel>
             <S.MottoTLabel>expereince, ensuring you leave our shop looking and feeling your best.</S.MottoTLabel>
@@ -70,7 +72,11 @@ const TeamSection = () => {
               ))
             }
             </S.CardWrapper>
-
+          </S.Section>
+          <S.Divider />
+          <S.Section>
+            <Footer />
+          </S.Section>
         </S.SectionWrapper>
     </S.Container>
   )

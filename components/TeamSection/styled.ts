@@ -11,6 +11,9 @@ export const Container = styled(Box)(prop =>({
 
 export const SectionWrapper = styled(Box).attrs(prop =>({
     marginTop: '100px',
+}))``
+
+export const Section = styled(Box).attrs(prop =>({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -62,10 +65,11 @@ export const Card = styled(Box)<CardProps>(prop =>({
 
 export const NameWrapper = styled(Box)(prop =>({
     borderRadius: '10px',
-    backgroundColor: Theme.colors.secondary,
+    backgroundColor: Theme.colors.neutral[1],
     marginTop: '10px',
     width: '150px',
     padding: '5px',
+    color:'white'
 }))
 
 export const IconWrapper = styled(Box)(prop =>({
@@ -91,4 +95,9 @@ export const BarberName = styled(Typography)(prop=>({
 
 export const PositionLabel = styled(Typography)(prop => ({
     marginTop: '-5px',
+}))
+
+export const Divider = styled(Box)(prop =>({
+    borderTop: `1px solid ${Theme.colors.neutral[1]}`,
+    marginTop: '100px',
 }))
