@@ -3,7 +3,12 @@ import styled from "styled-components";
 import Image2 from "../../public/images/image2.webp";
 import Theme from "../../theme";
 
-export const HeadContainer = styled.section`
+export const HeadContainer = styled(Box).attrs((prop) => ({
+  sx:{
+    height: {xs:'1000px'},
+
+  }
+}))`
   min-height: 100vh;
   width: 100vw;
   background-image: url(${Image2.src});

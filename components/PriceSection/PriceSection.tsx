@@ -82,7 +82,7 @@ const PriceSection = () => {
           <TextCarousel />
           <S.PriceList>
             <S.PriceListLabel>our prices</S.PriceListLabel>
-            <div>
+            <S.TableWrapper>
               {priceList.map((item, idx) => {
                 return (
                   <S.PriceItemContainer key={idx}>
@@ -91,7 +91,7 @@ const PriceSection = () => {
                   </S.PriceItemContainer>
                 );
               })}
-            </div>
+            </S.TableWrapper>
           </S.PriceList>
         </S.Section2>
       </S.SectionWrapper>

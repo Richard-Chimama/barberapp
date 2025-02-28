@@ -16,9 +16,9 @@ export const SectionWrapper = styled(Box).attrs(prop =>({
     justifyContent: 'space-around',
     alignItems: 'center',
     flexWrap: 'wrap',
-    width: {xs:"100vh", md:'90vw'},
-    marginTop: {xs: "50px"}
-    
+    marginTop: {xs: "50px"},
+    width: { xs: "90%", md: "80%" },
+    py: { sm: "5%", md: "10%" },
 }))``
 
 export const Section1 = styled(Box).attrs(prop =>({
@@ -28,7 +28,7 @@ export const Section1 = styled(Box).attrs(prop =>({
     width: '30%',
     minWidth: {xs: '400px',sm:'450px', md:'400px'},
     marginBottom: {xs: "100px"},
-
+    paddingRight: '70px',
 }))``
 
 export const Section1Header = styled(Typography).attrs(prop =>({
@@ -59,7 +59,7 @@ export const IframeLayer = styled(Box)(prop =>({
     top:'0',
     left: '0',
     backgroundColor: 'rgba(252,170,93, 0.4)',
-    width:"400px",
+    width:"100%",
     height:"500px"
 
 }))

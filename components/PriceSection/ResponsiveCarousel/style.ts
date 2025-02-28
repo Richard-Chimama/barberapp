@@ -13,7 +13,6 @@ export const Container = styled(Carousel)`
 
     @media( max-width: 768px){
         min-width: 100 !important;
-        border: 1px solid red;
     }
 
 `;

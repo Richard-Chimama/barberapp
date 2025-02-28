@@ -3,14 +3,14 @@ import { Carousel } from "react-responsive-carousel";
 import styled from "styled-components";
 import Theme from "../../../theme";
 
-export const Wrapper = styled(Box)((props) => ({
+export const Wrapper = styled(Box).attrs((props) => ({
   position: 'relative',
-  height: '400px',
-  width: "400px",
+  height: {xs:'500px', md:'400px'},
+  width: {xs:'340px', md:'400px'},
   backgroundColor: Theme.colors.tertiary,
   borderRadius: "25px",
 
-}));
+}))``;
 
 export const Container = styled(Carousel)((prop) => ({
   color: Theme.colors.primary,

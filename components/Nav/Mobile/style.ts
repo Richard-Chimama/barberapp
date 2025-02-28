@@ -56,7 +56,7 @@ export const MenuItem = styled.li`
     }
     
     & a:hover{
-        color: ${Theme.colors.secondary};
+        color: ${Theme.colors.primary};
         background-color: ${Theme.colors.secondary};
     }
 

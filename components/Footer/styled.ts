@@ -8,21 +8,25 @@ export const Container = styled(Box)(prop =>({
     marginBottom: '100px',
 }))
 
-export const Wrapper = styled(Box)(prop =>({
+export const Wrapper = styled(Box).attrs(prop =>({
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-}))
+    flexDirection: {xs:'column', md:'row'},
+    justifyContent: {xs: 'flex-start' ,md:'space-between'},
+    alignItems: {xs:'normal', md:'center'},
+    paddingRight: {xs:'20px', md:'100px'},
+    paddingLeft: {xs:'10px', md:'100px'},
+}))``
 
 export const Section = styled(Box)(prop =>({}))
-export const Footer = styled(Box)(prop =>({
+export const Footer = styled(Box).attrs(prop =>({
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: {xs:'column',md:'row'},
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: '100px',
-}))
+    paddingInline: '20px',
+    gap: {xs:'20px', md:'0'},
+}))``
 export const IconWrapper = styled(Box)(prop =>({
     display: 'flex',
     flexDirection: 'row',
@@ -47,7 +51,7 @@ export const Label = styled(Box)(prop =>({
 }))
 
 export const ReserveButton = styled(Box)(prop =>({
-    backgroundColor: Theme.colors.tertiary,
+    backgroundColor: Theme.colors.neutral[2],
     color: 'white',
     padding: '10px 20px',
     borderRadius: '8px',
@@ -55,6 +59,6 @@ export const ReserveButton = styled(Box)(prop =>({
     marginTop: '20px',
     textAlign: 'center',
     '&:hover':{
-        backgroundColor: Theme.colors.neutral[2],
+        backgroundColor: Theme.colors.tertiary,
     }
 }))
