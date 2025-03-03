@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Image2 from "../../public/images/image2.webp";
 import Theme from "../../theme";
 
-export const HeadContainer = styled(Box).attrs((prop) => ({
+export const HeadContainer = styled(Box).attrs(() => ({
   sx:{
     height: {xs:'1000px'},
 
@@ -19,7 +19,7 @@ export const HeadContainer = styled(Box).attrs((prop) => ({
   pt: '40px',
 
 `;
-export const NavWrapper = styled(Box)(prop =>({
+export const NavWrapper = styled(Box)( ()=>({
     paddingTop: '20px'
 }))
 
@@ -30,7 +30,7 @@ export const Wrapper = styled.div`
 
 `;
 
-export const HeadSection = styled(Box).attrs((prop) => ({
+export const HeadSection = styled(Box).attrs(() => ({
   sx: {
     position: "relative",
     display: "flex",
@@ -41,7 +41,7 @@ export const HeadSection = styled(Box).attrs((prop) => ({
   },
 }))``;
 
-export const FormSection = styled(Box).attrs((prop) => ({
+export const FormSection = styled(Box).attrs(() => ({
   sx: {
     display: "flex",
     flexDirection: "column",
@@ -51,7 +51,7 @@ export const FormSection = styled(Box).attrs((prop) => ({
   },
 }))``;
 
-export const TextSection = styled(Box).attrs((prop) => ({
+export const TextSection = styled(Box).attrs(() => ({
   sx: {
     height: { xs: "50px", sm: "200px" },
     width: "100%",
@@ -63,15 +63,15 @@ export const TextSection = styled(Box).attrs((prop) => ({
   },
 }))``;
 
-export const FormContainer = styled(Box).attrs((props) => ({}))``;
+export const FormContainer = styled(Box).attrs(() => ({}))``;
 
-export const MissionLabelWrapper = styled(Box).attrs((prop) => ({
+export const MissionLabelWrapper = styled(Box).attrs(() => ({
   height: { md: "300px" },
   width: { xs: "100%", sm: "500px" },
   position: "relative",
 }))``;
 
-export const MissionLabel = styled(Typography).attrs((prop) => ({
+export const MissionLabel = styled(Typography).attrs(() => ({
   fontSize: "18px",
   textshadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
   position: { md: "absolute" },
@@ -80,7 +80,7 @@ export const MissionLabel = styled(Typography).attrs((prop) => ({
   pl: "10px",
 }))``;
 
-export const MottoLabel = styled(Typography).attrs((prop) => ({
+export const MottoLabel = styled(Typography).attrs(() => ({
   fontSize: { xs: "35px", sm: "36px", md: "56px" },
   fontWeight: "900",
   textAlign: {xs:"left", md:"right"},

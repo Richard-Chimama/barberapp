@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import styled from "styled-components";
 import Theme from "../../../theme";
 
-export const Container = styled(Box).attrs(prop =>({
+export const Container = styled(Box).attrs(() =>({
     sx:{
         display:{xs:'flex', md:'none'},
         height:'60px',
@@ -13,11 +13,11 @@ export const Container = styled(Box).attrs(prop =>({
     }
 }))``
 
-export const LogoWrapper = styled(Box)(prop =>({
+export const LogoWrapper = styled(Box)(() =>({
     height: '50px',
 }))
 
-export const Logo = styled(Typography)(prop =>({
+export const Logo = styled(Typography)(() =>({
     color: 'white',
     fontSize: '22px',
     fontWeight: 'bold',
@@ -26,7 +26,7 @@ export const Logo = styled(Typography)(prop =>({
     textAlign: 'center',
 }))
 
-export const IconWrapper = styled(Button)(prop =>({
+export const IconWrapper = styled(Button)(() =>({
 
 }))
 

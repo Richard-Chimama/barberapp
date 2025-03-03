@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import styled from "styled-components";
 import Theme from "../../../theme";
 
-export const Container = styled(Box).attrs(prop =>({
+export const Container = styled(Box).attrs(() =>({
     sx:{
         display:{xs:'none', md:'flex'},
         height:'60px',
@@ -13,12 +13,12 @@ export const Container = styled(Box).attrs(prop =>({
     }
 }))``
 
-export const LogoWrapper = styled(Box)(prop =>({
+export const LogoWrapper = styled(Box)(() =>({
     height: '50px',
     width: '20%',
 }))
 
-export const Logo = styled(Typography)(prop =>({
+export const Logo = styled(Typography)(() =>({
     color: `${Theme.colors.secondary}`,
     fontSize: '28px',
     fontWeight: 'bold',
@@ -28,7 +28,7 @@ export const Logo = styled(Typography)(prop =>({
     textAlign: 'left',
 }))
 
-export const MenuWrapper = styled(Box)(prop =>({
+export const MenuWrapper = styled(Box)(() =>({
     width: '35%',
     minWidth: '400px',
     height: '50px',
@@ -68,13 +68,13 @@ export const MenuItem = styled.li`
 
 `
 
-export const ContactWrapper = styled(Box)(prop =>({
+export const ContactWrapper = styled(Box)(() =>({
     width: '10%',
     minWidth:'120px',
     height: '50px',
 }))
 
-export const ContactButton = styled(Button)(prop =>({
+export const ContactButton = styled(Button)(() =>({
     backgroundColor: Theme.colors.secondary,
     color: Theme.colors.primary,
     width: '100%',

@@ -1,6 +1,6 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import * as S from "./style";
-import { ArrowBack, ArrowForward, HorizontalRule } from "@mui/icons-material";
+import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import { useState } from "react";
 
 const reviewData = [

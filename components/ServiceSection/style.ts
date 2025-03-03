@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import styled from "styled-components";
 import Theme from "../../theme";
 
-export const Container = styled(Box)(prop =>({
+export const Container = styled(Box)(() =>({
     backgroundColor: '#4a403d',
     minHeight: '800px',
     height: '100%',
@@ -11,7 +11,7 @@ export const Container = styled(Box)(prop =>({
     justifyContent: 'center',
 }))
 
-export const SectionWrapper = styled(Box).attrs(prop =>({
+export const SectionWrapper = styled(Box).attrs(() =>({
     display: 'flex',
     justifyContent: 'space-around',
     alignItems: 'center',
@@ -21,7 +21,7 @@ export const SectionWrapper = styled(Box).attrs(prop =>({
     py: { sm: "5%", md: "10%" },
 }))``
 
-export const Section1 = styled(Box).attrs(prop =>({
+export const Section1 = styled(Box).attrs(() =>({
     display: 'flex',
     flexDirection: 'column',
     gap: '65px',
@@ -31,30 +31,30 @@ export const Section1 = styled(Box).attrs(prop =>({
     paddingRight: '70px',
 }))``
 
-export const Section1Header = styled(Typography).attrs(prop =>({
+export const Section1Header = styled(Typography).attrs(() =>({
     fontSize: {xs:'38px', md:'46px'},
     fontWeight: 800,
     color: Theme.colors.secondary,
 }))``
 
-export const Section1Text = styled(Typography)(prop =>({
+export const Section1Text = styled(Typography)(() =>({
     fontSize: '18px',
     fontWeight: 300,
     color: Theme.colors.secondary,
 }))
 
-export const SubmitButton = styled(Button)(prop =>({
+export const SubmitButton = styled(Button)(() =>({
     backgroundColor: Theme.colors.tertiary,
     color: Theme.colors.primary,
     height: '50px',
     fontWeight: 700,
 }))
 
-export const MapWrapper = styled(Box)(prop => ({
+export const MapWrapper = styled(Box)(() => ({
     position: 'relative',
 }))
 
-export const IframeLayer = styled(Box)(prop =>({
+export const IframeLayer = styled(Box)(() =>({
     position: 'absolute',
     top:'0',
     left: '0',
@@ -64,7 +64,7 @@ export const IframeLayer = styled(Box)(prop =>({
 
 }))
 
-export const LocationSection = styled(Box)(prop => ({
+export const LocationSection = styled(Box)(() => ({
     minWidth: '300px',
     height: '500px',
     display: 'flex',
@@ -73,7 +73,7 @@ export const LocationSection = styled(Box)(prop => ({
     gap: '75px',
 }))
 
-export const Spacer = styled(Box)(prop =>({
+export const Spacer = styled(Box)(() =>({
     width: '80%',
     border: `2px solid ${Theme.colors.neutral[0]}`,
     marginLeft: 'auto',

@@ -1,6 +1,12 @@
-import { FC, forwardRef, useEffect, useImperativeHandle, useState } from "react";
+import {
+  FC,
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useState,
+} from "react";
 import * as S from "./style";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 
 interface Props {
   images: StaticImageData[];
@@ -16,21 +22,20 @@ const ResponsiveCarousel: FC<Props> = forwardRef<CarouselRef, Props>(
     const [index, setIndex] = useState<number>(0);
     const totalImages = images.length;
 
-    const [screenWidth, setScreenWidth] = useState<number| null >(null)
-    const isMobile = screenWidth ? screenWidth > 700: false;
-    const showMoreItems = isMobile ? 50: 0;
-
+    const [screenWidth, setScreenWidth] = useState<number | null>(null);
+    const isMobile = screenWidth ? screenWidth > 700 : false;
+    const showMoreItems = isMobile ? 50 : 0;
 
     useEffect(() => {
       const handleResize = () => {
         setScreenWidth(window.innerWidth);
       };
-        window.addEventListener("resize", handleResize);
-  
+      window.addEventListener("resize", handleResize);
+
       return () => {
         window.removeEventListener("resize", handleResize);
       };
-    }, []); 
+    }, []);
 
     const moveLeft = () => {
       setIndex((prev) => (prev > 0 ? prev - 1 : totalImages - 1));
@@ -43,7 +48,8 @@ const ResponsiveCarousel: FC<Props> = forwardRef<CarouselRef, Props>(
     useImperativeHandle(
       ref,
       () => ({ moveLeft, moveRight, totalImages, index }),
-      [index]
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      [index, totalImages]
     );
 
     return (
@@ -59,7 +65,6 @@ const ResponsiveCarousel: FC<Props> = forwardRef<CarouselRef, Props>(
         centerMode={isMobile}
         centerSlidePercentage={showMoreItems}
         dynamicHeight={true}
-
       >
         {images.map((img, idx) => (
           <S.Img key={idx} src={img} alt={"hair cut image"} />
@@ -68,5 +73,7 @@ const ResponsiveCarousel: FC<Props> = forwardRef<CarouselRef, Props>(
     );
   }
 );
+
+ResponsiveCarousel.displayName = "ResponsiveCarousel";
 
 export default ResponsiveCarousel;

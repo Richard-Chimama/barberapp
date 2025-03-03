@@ -17,14 +17,14 @@ export const Container = styled(Carousel)`
 
 `;
 
-export const ImageWrapper = styled(Box)((props) => ({
+export const ImageWrapper = styled(Box)(() => ({
   display: "flex",
   gap: "16px",
   justifyContent: "center",
   transition: "transform 0.3s ease-in-out",
 }));
 
-export const Img = styled(Image)((props) => ({
+export const Img = styled(Image)(() => ({
   width: "100%",
   maxWidth: "400px",
   height: "400px",

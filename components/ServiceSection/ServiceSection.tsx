@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -17,7 +16,7 @@ const ServiceSection = () => {
 
           <S.Section1Text>
             Our barbershop is the territory created purely for men who
-            appreciate premium quality, time and flawless look. We'll help you
+            appreciate premium quality, time and flawless look. We&apos;ll help you
             to look stylish and confident in the most discreet way.
           </S.Section1Text>
           <S.SubmitButton>

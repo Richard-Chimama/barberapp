@@ -1,30 +1,28 @@
-import { Box, Typography, fabClasses } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import styled from "styled-components";
 import Theme from "../../theme";
 
-export const Container = styled(Box).attrs(props =>({
+export const Container = styled(Box).attrs(() =>({
     width: '100vw',
     backgroundColor: Theme.colors.neutral[3],
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop:{xs:'150px', md:'100px'},
-    paddingLeft: {md:'20%'},
-    paddingRight: {md:'20%'},
     paddingBottom: '100px',
 
 }))``
 
-export const SectionWrapper = styled(Box).attrs(props =>({
+export const SectionWrapper = styled(Box).attrs(() =>({
     display: 'flex',
     flexDirection: 'column',
     gap: '100px',
     width: {xs: '100%', sm: '100%', md: '80%'},
-    marginLeft: {xs: '10px', sm: '10px', md: '10%'},
+    marginLeft: {xs: '10px', sm: '10px', md: '10px', lg: '10%'},
     marginRight: {xs: '10px', sm: '10px', md: '10%'},
 }))``
 
-export const Section1 = styled(Box).attrs(prop =>({
+export const Section1 = styled(Box).attrs(() =>({
     display: 'flex',
     flexDirection: {xs: 'column', md:'row'},
     justifyContent: 'center',
@@ -34,17 +32,17 @@ export const Section1 = styled(Box).attrs(prop =>({
     paddingInline: ' 20px',
 }))``;
 
-export const TextSection1 = styled(Box).attrs(prop =>({
+export const TextSection1 = styled(Box).attrs(() =>({
     display: 'flex',
     flexDirection: 'column',
     rowGap: '65px',
 }))``
 
-export const TextLabel = styled(Box)(prop =>({
+export const TextLabel = styled(Box)(() =>({
     width: '100px',
 }))
 
-export const HeadTextSection1 = styled(Typography).attrs(prop =>({
+export const HeadTextSection1 = styled(Typography).attrs(() =>({
     color: Theme.colors.neutral[2],
     textTransform: 'uppercase',
     fontSize: {xs:'38px', md:'46px'},
@@ -53,11 +51,11 @@ export const HeadTextSection1 = styled(Typography).attrs(prop =>({
     width: '400px',
 }))``
 
-export const ContentTextSection1 = styled(Typography)(props =>({
+export const ContentTextSection1 = styled(Typography)(() =>({
     color: Theme.colors.neutral[2],
 }))
 
-export const IconContainer = styled(Box)(props =>({
+export const IconContainer = styled(Box)(() =>({
     display: 'flex',
     gap: '5px',
 }))
@@ -75,12 +73,12 @@ export const IcontButton = styled.div`
 
 `
 
-export const ImageSection = styled(Box).attrs(props =>({
+export const ImageSection = styled(Box).attrs(() =>({
     height: '400px',
     marginTop: {xs: '20px', md:'0px'},
 }))``
 
-export const Section2 = styled(Box).attrs(prop =>({
+export const Section2 = styled(Box).attrs(() =>({
     display: 'flex',
     flexDirection: {xs: 'column-reverse', md:'row'},
     gap: {xs: '50px',md:'0px'},
@@ -89,22 +87,22 @@ export const Section2 = styled(Box).attrs(prop =>({
     marginTop: '100px',
 }))``;
 
-export const PriceList = styled(Box).attrs(prop =>({
+export const PriceList = styled(Box).attrs(() =>({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: {xs: 'space-around', sm:'space-between'},
-    width: {xs: '80%', sm:'500px'},
+    width: {xs: '80%', sm:'500px', md:'300px', lg:'500px'},
     height: '350px',
 }))``
 
-export const PriceListLabel = styled(Typography).attrs(prop => ({
+export const PriceListLabel = styled(Typography).attrs(() => ({
     textTransform: 'uppercase',
     lineHeight: '50px',
     fontSize: {xs:'38px', md:'46px'},
     fontWeight: 800,
 }))``
 
-export const PriceItemContainer = styled(Box).attrs(prop =>({
+export const PriceItemContainer = styled(Box).attrs(() =>({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -113,6 +111,6 @@ export const PriceItemContainer = styled(Box).attrs(prop =>({
 }))`
 `
 
-export const TableWrapper = styled(Box).attrs(prop =>({
+export const TableWrapper = styled(Box).attrs(() =>({
 
 }))``

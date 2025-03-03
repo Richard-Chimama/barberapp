@@ -5,7 +5,6 @@ import image3 from '../../public/images/image3.jpg'
 import image4 from '../../public/images/image4.jpg'
 import image5 from '../../public/images/image5.jpg'
 import image6 from '../../public/images/image6.jpg'
-import image7 from '../../public/images/image7.jpg'
 import Theme from '../../theme';
 import Footer from '../Footer';
 
