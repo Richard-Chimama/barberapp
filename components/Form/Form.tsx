@@ -1,8 +1,6 @@
 import {
   FormControl,
   FormHelperText,
-  OutlinedInput,
-  Typography,
   useFormControl,
 } from "@mui/material";
 import * as S from "./style";
@@ -42,7 +40,7 @@ function MyFormHelperText({onFocus}:{onFocus: string}) {
     }
 
     //return 
-  }, [focused]);
+  }, [focused, onFocus]);
 
   return <FormHelperText sx={{color:'white'}}>{helperText}</FormHelperText>;
 }

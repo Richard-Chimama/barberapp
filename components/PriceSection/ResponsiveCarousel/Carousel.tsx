@@ -1,5 +1,4 @@
 import {
-  FC,
   forwardRef,
   useEffect,
   useImperativeHandle,
@@ -15,9 +14,15 @@ interface Props {
 export interface CarouselRef {
   moveLeft: () => void;
   moveRight: () => void;
+  totalImages: number;
+  index: number;
 }
 
-const ResponsiveCarousel: FC<Props> = forwardRef<CarouselRef, Props>(
+//const ResponsiveCarousel = forwardRef<CarouselRef, { images: StaticImageData[] }>(({ images }, ref) => {
+  // component implementation
+//});
+
+const ResponsiveCarousel = forwardRef<CarouselRef, Props>(
   ({ images }, ref) => {
     const [index, setIndex] = useState<number>(0);
     const totalImages = images.length;
@@ -45,12 +50,12 @@ const ResponsiveCarousel: FC<Props> = forwardRef<CarouselRef, Props>(
       setIndex((prev) => (prev < totalImages - 1 ? prev + 1 : 0));
     };
 
-    useImperativeHandle(
-      ref,
-      () => ({ moveLeft, moveRight, totalImages, index }),
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      [index, totalImages]
-    );
+    useImperativeHandle(ref, () => ({
+      moveLeft,
+      moveRight,
+      totalImages,
+      index,
+    }));
 
     return (
       <S.Container

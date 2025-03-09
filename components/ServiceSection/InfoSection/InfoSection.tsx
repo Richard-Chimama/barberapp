@@ -4,7 +4,7 @@ import { SvgIconTypeMap } from '@mui/material'
 
 
 interface Props {
-    icon: OverridableComponent<SvgIconTypeMap<{}, "svg">>,
+    icon: OverridableComponent<SvgIconTypeMap<object, "svg">>,
     headerLabel: string,
     textLabel: string
 }

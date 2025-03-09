@@ -35,15 +35,14 @@ const priceList = [
 ];
 
 const images: StaticImageData[] = [image1, image2, image1, image2];
-
 const PriceSection = () => {
   const carouselRef = useRef<CarouselRef>(null);
 
-  const handleClikLeft = () => {
+  const handleClickLeft = () => {
     carouselRef.current?.moveLeft();
   };
 
-  const handleClikRight = () => {
+  const handleClickRight = () => {
     carouselRef.current?.moveRight();
   };
 
@@ -63,10 +62,10 @@ const PriceSection = () => {
             </S.ContentTextSection1>
 
             <S.IconContainer>
-              <S.IcontButton onClick={handleClikLeft}>
+              <S.IcontButton onClick={handleClickLeft}>
                 <ArrowBackIcon />
               </S.IcontButton>
-              <S.IcontButton onClick={handleClikRight}>
+              <S.IcontButton onClick={handleClickRight}>
                 <ArrowForwardIcon />
               </S.IcontButton>
             </S.IconContainer>

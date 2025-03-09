@@ -1,7 +1,7 @@
 import { Box, Button, OutlinedInput, Typography } from "@mui/material";
 import styled from "styled-components";
 
-export const Wrapper = styled(Box)(prop => ({
+export const Wrapper = styled(Box)(()=> ({
   backgroundColor:` rgba(0,0,0,0.4)`,
   borderRadius: "15px",
   outline: "1px solid rgba(255,255,255,06)",
@@ -15,7 +15,7 @@ export const FormContainer = styled.form`
   padding-bottom: 15px;
 `;
 
-export const FormInput = styled(OutlinedInput)((prop) => ({
+export const FormInput = styled(OutlinedInput)(() => ({
   color: "white",
   "& .MuiOutlinedInput-notchedOutline": {
     borderColor: "rgba(255,255,255,0.6)",
@@ -25,28 +25,28 @@ export const FormInput = styled(OutlinedInput)((prop) => ({
   },
 }));
 
-export const Spacer = styled(Box).attrs((prop) => ({
+export const Spacer = styled(Box).attrs(() => ({
   sx: {
     width: "100%",
     height: "20px",
   },
 }))``;
 
-export const HeadingLabel = styled(Typography)((prop) => ({
+export const HeadingLabel = styled(Typography)(() => ({
   fontSize: "24px",
   fontWeight: "bold",
   marginTop: "20px",
   marginBottom: "10px",
 }));
 
-export const SubmitButton = styled(Button)(prop =>({
+export const SubmitButton = styled(Button)(() =>({
     backgroundColor: "#fcaa5d",
     color: 'black',
     height: '48px',
     borderRadius: '8px',
 }))
 
-export const SelectSlot = styled(Box)(prop => ({
+export const SelectSlot = styled(Box)(() => ({
     height: '48px',
     width: '100%',
     border: '1px solid rgba(255,255,255,0.6)'
