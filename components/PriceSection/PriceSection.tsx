@@ -6,7 +6,6 @@ import { StaticImageData } from "next/image";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useRef } from "react";
-import { Fab, Typography } from "@mui/material";
 import TextCarousel from "./TextCarousel";
 
 export interface CarouselRef {
